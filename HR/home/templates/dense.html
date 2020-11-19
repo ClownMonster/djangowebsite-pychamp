@@ -1,0 +1,189 @@
+{% load socialaccount %}
+<html>
+    <head>
+        <title>HackerRank Solution</title>
+
+        <!-- meta site tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="" type="image/png">
+        <meta name="description" content=""> 
+		<meta property="og:title" content=" "/>
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="">
+		<meta property="og:image" content=""> 
+		<meta property="og:type" content=””/>
+
+
+        <!-- Bootstrap and fonts -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> 
+        
+
+        <!--Analytics -->
+
+    </head>
+    <body>
+       <!-- Nav Bar Area -->
+       <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container box_1620">
+                    <a class="nav-title" href = "" >HackerRank Solutions</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item "><a class="nav-link" href="{% url 'solutionList' %}">Home</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="https://clownmonster.github.io/My_Portfolio/contact.html">Contact</a></li>
+                            {% if user.is_authenticated %}
+                                <li class="nav-item"><a class="nav-link" href>{{user.username}}</a></li>
+                                <li class="nav-item" id="logoutBtn"><a class="nav-link">Logout</a></li>
+                                
+                               {% else %}
+                                <li class="nav-item"><a class="nav-link" href="{% provider_login_url 'google' %}">Login with Google</a></li>
+                            {% endif %}
+
+
+                        </ul>
+                    </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </br>
+
+       <!--End of Nav bar-->
+
+       <!--Side Bar area -->
+
+
+       <!--End of side bar-->
+
+       
+        <!-- Center-aligned -->
+    
+  
+       <!-- Footer Area -->
+        <footer>
+           
+        </footer>
+
+       <!--End of Footer -->
+
+       <!-- bootstrap  -->
+
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+<script>
+    $('#logoutBtn').on('click', function(){
+        window.location = "{% url 'logout'%}";
+    });
+
+
+</script>
+
+
+
+
+
+
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #04091e;
+}
+
+.header_area{
+    
+    background: #04091e;
+    color: white;
+    transition: background-color 0.4s, all 0.3s linear;
+
+}
+
+.nav-title{
+  color:white;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.nav-title:hover{
+   
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item, .nav-link{
+    font-size: 18px;
+    color:white !important;
+    text-decoration: none; 
+    padding-right: 0.6rem;
+    font-family: "Heebo", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+ }
+
+button:focus {
+  outline: none;
+  box-shadow: none; 
+}
+
+.navbar-toggler, .icon-bar{
+    color:white !important;
+
+}
+
+.container{
+    
+    justify-content: center;
+    padding: 1rem 1rem;
+    float: left;
+}
+
+.card{
+    background: #222222;
+    box-sizing: border-box;
+   box-shadow: 2px 2px 3px 2px black;
+   font-family: 'Times New Roman', Times, serif;
+   margin-right: 2rem;
+   color: white;
+   font-size: 18px;
+}
+
+.card-title{
+    font-size: 32px;
+
+}
+
+
+
+
+
+</style>
+    </body>
+</html>
+

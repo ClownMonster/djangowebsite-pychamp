@@ -1,0 +1,398 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <title>HackerRank Solutions</title>
+        <meta name="google-site-verification" content="ekio-C7H1yGdgCCxsVVBUSgZrAuQubguIBTLp1_mpWI" />
+                    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LM4CMEJ0XE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LM4CMEJ0XE');
+</script>
+
+<!-- adsense -->
+<script data-ad-client="ca-pub-3125034036050714" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSKCW5H');</script>
+    <!-- End Google Tag Manager -->
+
+
+        <!-- meta site tags-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="canonical"  href="https://hackerranksolution.in" />
+        <link rel="canonical"  href="hackerranksolution.in" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static '/home/logo2.png' %}" type="image/png">
+        <meta name="description" content="{{ object.problemStatement }}"> 
+		<meta property="og:description" content="{{ object.title }} {{ object.problemStatement }}">
+        <meta property="og:site_name" content="HackerRank Solutions" />
+		<meta property="og:title" content="HackerRank Solutions"/>
+		<meta property="og:url" content="https://hackerranksolution.in/" />
+		<meta property="og:image" content=""> 
+        <meta property="og:type" content=”website”/>
+        <meta name="keywords" content="{{ object.title }} {{ object.problemStatement }} ,HackerRank, HackerRankSolutions, hacker rank, hacker rank solution, hacker rank solutions, algorithms, data strctures, python, java, interview preparation kit, c, c++, solutions for hackerrank,solutions for hacker rank, hacker rank problems, solution for hacker rank problems">
+       
+
+
+
+        <!-- Bootstrap and fonts -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/bd81c4ab1e.js" crossorigin="anonymous"></script>
+
+        
+
+
+
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSKCW5H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        <!-- Nav Bar Area -->
+        <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container box_1620">
+                    <a class="nav-title" href = "" ><img src="{% static '/home/logo2.png' %}"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div >
+                            <i style="color: white !important;" class="fas fa-bars"></i>
+                        
+                        </div>
+                        
+                    
+                <nav class="navbar navbar-expand-lg navbar-light">
+                        </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'solutionList' %}">Home</a></li> 
+                              <!-- Drop down selection -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select Domain
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="{% url 'Datastructures' %}">Data Structures</a>
+                          <a class="dropdown-item" href="{% url 'ProblemSolving' %}">Problem Solving / Algorithms</a>
+                          <a class="dropdown-item" href="{% url 'C' %}">C</a>
+                          <a class="dropdown-item" href="{% url 'C++' %}">C++</a>
+                          <a class="dropdown-item" href="{% url 'Python' %}">Python</a>
+                          <a class="dropdown-item" href="{% url 'Java' %}">Java</a>
+                          <a class="dropdown-item" href="{% url 'Interview' %}">Interview Preparation Kit</a>
+
+
+
+                        </div>
+                      </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="https://clownmonster.github.io/My_Portfolio/contact.html">Contact</a></li>
+                            {% if user.is_authenticated %}
+                                <li class="nav-item"><a class="nav-link" href>{{user.username}}</a></li>
+                                <li class="nav-item" id="logoutBtn"><a class="nav-link">Logout</a></li>
+                                
+                               {% else %}
+                                <li id = "loginBtn" class="nav-item"><img src="{% static '/home/sign_in.png' %}"></li>
+
+                            {% endif %}
+
+                
+                    
+                        </ul>
+                    </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </br>
+       <!--End of Nav bar-->
+
+       <!--Side Bar area -->
+
+
+       <!--End of side bar-->
+
+       <!--Problem Detailed Solution Area -->
+        <div class="container">
+            <div class="title" >
+                <h3><b>{{ object.title }}</b></h3>
+            </div>
+            <br/>
+            <div>
+                <div>
+                    <h3 class="p-title">Problem Statement :</h3>
+                    <br/>
+                    <pre>{{ object.problemStatement }}</pre>
+                </div>
+            </div>
+            <hr style = "height:4px;border-width:0;color:gray;background-color:black">
+        <br/>
+            <div>
+                <div>
+                    <h3 class="p-title" >Solution : </h3>
+                    <br/>
+                <div class="code-block">
+                    <pre>
+                        <code  style="margin-bottom:6rem;">{{ object.solution }}</code>
+                    </pre>
+                </div>
+                         
+                <br/>
+                </div>
+            </div>
+
+        </div>  
+
+
+
+        <!--End of Problem Detailed Solution -->
+
+      
+
+       <!-- Footer Area -->
+       <footer class="footer">
+        <!--
+        <div class="part1">
+            <h3>Contact Us @</h3>
+            <h4 ><i style="padding-right: 1rem !important;" class="fab fa-discord"></i>Discord</h4>
+            <h4>Mail Id: mk6386223@gmail.com</h4>
+            <h4>Write to Us @</h4>
+        </div>
+    -->
+        <div class="part2">
+            <p>Copyrights &copy ClownMonster's Inc</p>
+        </div>
+    </footer>
+
+       <!--End of Footer -->
+
+       <!-- bootstrap  -->
+
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+body{
+    background: whitesmoke;
+    
+  
+
+}
+.header_area{
+    background:linear-gradient(#000428,#004e92);
+    background:black;
+    color: white;
+    transition: background-color 0.4s, all 0.3s linear;
+    padding: 0.3rem;
+    border-radius: 1px;
+
+}
+
+.nav-title{  
+  color:white ;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  
+  
+}
+
+.nav-title > img{
+    width: 19rem;
+}
+
+.nav-title:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav-item, .nav-link{
+    font-size: 18px;
+    color:white !important;
+    text-decoration: none; 
+    padding-right: 0.6rem;
+    font-family: "Heebo";
+   font-weight: bolder;
+
+}
+
+
+#loginBtn{
+    margin-top: 0.2rem;
+    width: 10rem;
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+
+#loginBtn > img{
+    width: 10rem;
+
+}
+
+
+#logoutBtn:hover{
+
+cursor: pointer;
+font-size: 18px;
+color:white !important;
+text-decoration: none; 
+padding-right: 0.6rem;
+font-family: "Heebo", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+ }
+
+button:focus {
+  outline: none;
+  box-shadow: none; 
+}
+
+
+.container{
+    color:black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > .title > h3{
+    font-size: 32px;
+    align-self: center;
+    font-family: "Heebo";
+
+}
+
+.p-title{
+    font-family: "Heebo";
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    font-family: "Heebo";
+    font-weight:bold ;
+    background:linear-gradient(#000428,#004e92);
+    background:black;
+    height: 8rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    
+}
+
+
+.footer > .part2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+}
+
+
+.search-box > form > .q{
+    color:black;
+    padding: 0.7rem;
+    width: 30rem;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 10px;
+}
+
+
+.dropdown-item:hover{
+    background-color: #34495e  !important; 
+    color: white;
+}
+
+
+
+.search-box > form > .btn{
+    background-color: blue;
+    color: white;
+}
+
+.code-block{
+    background-color: black;
+    
+}
+
+.code-block > pre{
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding-right: 7rem;
+}
+
+.code-block > pre > code{
+    color:#64dd17 !important;
+}
+
+@media only screen and (max-width:870px){
+
+.code-block > pre{
+    display: flex;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.p-title{
+   
+    font-size: 20px;
+}
+
+}
+
+
+</style>
+    </body>
+</html>
