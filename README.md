@@ -29,15 +29,18 @@ step 2: navigate to the cloned folder
 </br>
 step 3: activate the HackerRankEnv 
 </br>
+</br>
              if windows source HackerRankEnv/Scripts/activate
              </br>
-             if mac/linux  source/bin/activate
+             </br>
+             if mac/linux source  HackerRankEnv/bin/activate
+             </br>
              </br>
 step 4: navigate to root of project by  "cd HackerRank"
 </br>
 step 5: run >> python3 manage.py runserver
 </br>
-
+</br>
 if you get any requirements error
 </br>
 just run pip3 install -r requirements.txt in the same location where manage.py exists </p>
