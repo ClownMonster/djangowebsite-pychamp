@@ -24,12 +24,21 @@ We also used django allauth SocialAccounts library to enable login with google(g
 </br>
 <p>
 step 1: clone your repo from https://github.com/pychampsHackathon/djangowebsite-pychamp
+  </br>
 step 2: navigate to the cloned folder
+</br>
 step 3: activate the HackerRankEnv 
+</br>
              if windows source HackerRankEnv/Scripts/activate
+             </br>
              if mac/linux  source/bin/activate
+             </br>
 step 4: navigate to root of project by  "cd HackerRank"
+</br>
 step 5: run >> python3 manage.py runserver
+</br>
 
 if you get any requirements error
+</br>
 just run pip3 install -r requirements.txt in the same location where manage.py exists </p>
+</br>
