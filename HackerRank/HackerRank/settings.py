@@ -1,17 +1,17 @@
 
 from pathlib import Path
-#import django_heroku
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "*^UTUJN*(&^%&$TVYT^FRD%TDCTBNhufh8dsyi7^%$354(*&^%$#"
+SECRET_KEY = "*^UTUJN*(&^%&$TVYT^FRD%TDCTBNhufh8dsyi7^%#3%$354(*&^%$#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,4 +142,4 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
